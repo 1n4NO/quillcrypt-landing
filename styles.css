@@ -12,11 +12,145 @@ a { color:inherit; text-decoration:none; }
 .signal-band { border-block:1px solid var(--line); overflow:hidden; }.signal-inner { display:flex; justify-content:space-between; align-items:center; height:80px; color:var(--muted); font:11px var(--mono); text-transform:uppercase; letter-spacing:.08em; }.signal-inner b { color:var(--accent); font-size:17px; }
 .manifesto,.how { padding:150px 0; }.section-index { display:flex; gap:10px; }.section-index span { color:var(--accent); }.manifesto-grid { display:grid; grid-template-columns:1fr 1fr; gap:10%; margin-top:70px; }.manifesto h2,.how h2,.privacy h2 { font-size:clamp(54px,7.2vw,98px); line-height:.92; letter-spacing:-.08em; font-weight:500; margin:0; }.manifesto-copy { align-self:end; max-width:410px; color:var(--muted); }.lede { color:var(--paper); font-size:25px; line-height:1.25; letter-spacing:-.03em; }.manifesto-copy .text-link { display:inline-block; margin-top:32px; }
 .how { border-top:1px solid var(--line); }.how-heading { display:flex; justify-content:space-between; align-items:end; margin:72px 0 60px; }.how-note { color:var(--muted); text-align:right; font:11px var(--mono); text-transform:uppercase; line-height:1.6; }.feature { display:grid; grid-template-columns:1fr 40px; gap:24px; border-top:1px solid var(--line); padding:27px 0 32px; align-items:start; }.feature:last-child { border-bottom:1px solid var(--line); }.feature-arrow { font:20px var(--mono); color:var(--accent); text-align:right; }.feature h3 { font-size:25px; font-weight:500; margin:0 0 11px; }.feature p { margin:0; color:var(--muted); max-width:510px; }
+.pricing { border-top:1px solid var(--line); padding:140px 0 150px; }.pricing-heading { max-width:760px; }.pricing-heading .section-index { margin-bottom:54px; }.pricing h2 { font-size:clamp(54px,7.2vw,98px); line-height:.92; letter-spacing:-.08em; font-weight:500; margin:0; }.pricing h2 em { font-family:var(--display); font-weight:500; letter-spacing:-.08em; }.pricing-intro { max-width:390px; color:var(--muted); font-size:18px; margin:34px 0 0 28%; }.pricing-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:82px; }.plan { min-height:470px; padding:27px 29px 29px; display:flex; flex-direction:column; border:1px solid var(--line); }.plan-free { background:#191916; }.plan-pro { color:var(--ink); background:var(--paper); border-color:var(--paper); }.plan-top { display:flex; align-items:center; justify-content:space-between; font:11px var(--mono); text-transform:uppercase; letter-spacing:.08em; }.plan-name { color:var(--accent); }.plan-pro .plan-name { color:#8a6a10; }.plan-note { color:var(--muted); }.plan-badge { color:#67665f; }.plan-price { margin:62px 0 16px; font-size:clamp(44px,5vw,72px); line-height:1; letter-spacing:-.08em; }.plan-price small { font:11px var(--mono); letter-spacing:.02em; color:var(--muted); }.plan-pro .plan-price small { color:#67665f; }.plan-description { max-width:290px; min-height:55px; color:var(--muted); font-size:15px; line-height:1.45; }.plan-pro .plan-description { color:#67665f; }.plan-features { list-style:none; margin:35px 0 30px; padding:0; border-top:1px solid var(--line); }.plan-pro .plan-features { border-color:#c6c5bd; }.plan-features li { padding:12px 0; border-bottom:1px solid var(--line); font-size:13px; }.plan-pro .plan-features li { border-color:#c6c5bd; }.plan-features li::before { content:'+'; color:var(--accent); margin-right:10px; font-family:var(--mono); }.plan-features .is-locked { color:#77766e; }.plan-features .is-locked::before { content:'—'; color:#77766e; }.plan-link { align-self:flex-start; margin-top:auto; padding-bottom:5px; border-bottom:1px solid var(--muted); color:var(--paper); font-size:12px; }.plan-link span { margin-left:10px; color:var(--accent); }.plan-pro .button { align-self:flex-start; margin-top:auto; }.pricing-footnote { color:var(--muted); font:11px var(--mono); text-transform:uppercase; margin:28px 0 0; }
 .privacy { border-top:1px solid var(--line); padding:140px 0; display:grid; grid-template-columns:1fr 1fr; gap:10%; align-items:center; }.privacy-art { aspect-ratio:1; max-width:420px; position:relative; display:grid; place-items:center; border:1px solid var(--line); overflow:hidden; }.privacy-art::before { content:""; position:absolute; width:120%; height:1px; background:var(--line); transform:rotate(-34deg); }.privacy-art>span { position:absolute; bottom:20px; left:20px; font:11px var(--mono); text-transform:uppercase; line-height:1.45; color:var(--muted); }.privacy-mark { width:125px; height:125px; display:grid; place-items:center; background:var(--accent); z-index:1; }.privacy-mark img { width:75px; filter:brightness(0); }.orbit { position:absolute; border:1px solid var(--line); border-radius:50%; }.orbit-one { width:70%; height:70%; }.orbit-two { width:42%; height:120%; transform:rotate(35deg); }.privacy-copy .lede { margin:35px 0 20px; }.privacy-copy>p:not(.lede) { max-width:395px; color:var(--muted); }.privacy-copy .text-link { display:inline-block; margin-top:27px; }.download-label { color:var(--muted); font:11px var(--mono); text-transform:uppercase; }
 .download { border-top:1px solid var(--line); padding:90px 0 120px; }.download-top,.download-bottom { display:flex; justify-content:space-between; }.download-top p,.download-bottom p { color:var(--muted); font:11px var(--mono); text-transform:uppercase; line-height:1.55; text-align:right; }.download h2 { margin:100px 0 80px; max-width:780px; }.download-actions { display:flex; align-items:center; gap:25px; }.platform-link { font-size:12px; color:var(--muted); border-bottom:1px solid var(--muted); padding-bottom:5px; }.site-footer { min-height:90px; border-top:1px solid var(--line); display:flex; justify-content:space-between; align-items:center; color:var(--muted); font:10px var(--mono); text-transform:uppercase; }.site-footer .brand { color:var(--paper); font:700 16px var(--sans); text-transform:none; }.site-footer .brand img { width:20px; height:20px; }.site-footer>a:last-child:hover { color:var(--accent); }
 .reveal { opacity:0; transform:translateY(22px); transition:opacity .8s ease,transform .8s ease; }.reveal.visible { opacity:1; transform:none; }
 .release-unavailable { opacity:.55; cursor:not-allowed; }
 .privacy-page { min-height:100vh; padding:78px 0 120px; }.privacy-page .brand { margin-bottom:92px; }.privacy-page h1 { font-size:clamp(64px,8vw,116px); letter-spacing:-.085em; line-height:.91; font-weight:500; margin:28px 0 32px; }.privacy-page h1 em { font-family:var(--display); font-weight:500; letter-spacing:-.08em; }.privacy-page-copy { max-width:660px; margin:44px 0 34px 20%; color:var(--muted); }.privacy-page-copy p { margin:0 0 22px; }.privacy-page .text-link { display:inline-block; margin-left:20%; }
-@media (max-width:800px) { .shell { width:min(100% - 38px,600px); }.site-header { min-height:72px; }.menu-toggle { display:block; color:var(--paper); background:none; border:0; font:11px var(--mono); text-transform:uppercase; }.menu-toggle span { color:var(--accent); font-size:18px; margin-left:8px; }.site-nav { display:none; position:absolute; inset:72px 0 auto; padding:22px; background:var(--ink); border:1px solid var(--line); flex-direction:column; align-items:stretch; gap:18px; }.site-nav.open { display:flex; }.hero { display:block; padding:72px 0; }.hero h1 { font-size:clamp(58px,17vw,100px); }.hero-art { min-height:420px; margin-top:50px; }.browser-body { min-height:315px; padding:35px 28px; }.browser-body h2 { font-size:30px; }.annotation-note { right:18px; top:160px; }.annotation-pin { left:52%; top:139px; }.art-stamp { left:0; top:20px; }.art-caption { right:0; bottom:0; }.signal-inner { width:850px; justify-content:space-around; margin-left:-100px; }.manifesto,.how,.privacy { padding:95px 0; }.manifesto-grid,.privacy { display:block; }.manifesto-copy { margin-top:50px; }.how-heading { display:block; margin:55px 0 42px; }.how-note { text-align:left; margin-top:28px; }.feature { grid-template-columns:1fr; gap:14px; }.feature-arrow { display:none; }.privacy-art { margin-bottom:70px; }.download { padding:72px 0 90px; }.download-top,.download-bottom { display:block; }.download-top p,.download-bottom p { text-align:left; margin-top:25px; }.download h2 { margin:75px 0 52px; font-size:clamp(62px,17vw,100px); }.download-actions { margin-top:30px; flex-wrap:wrap; }.site-footer { min-height:130px; align-items:flex-start; padding:26px 0; flex-direction:column; gap:20px; } }
+@media (max-width:800px) { .shell { width:min(100% - 38px,600px); }.site-header { min-height:72px; }.menu-toggle { display:block; color:var(--paper); background:none; border:0; font:11px var(--mono); text-transform:uppercase; }.menu-toggle span { color:var(--accent); font-size:18px; margin-left:8px; }.site-nav { display:none; position:absolute; inset:72px 0 auto; padding:22px; background:var(--ink); border:1px solid var(--line); flex-direction:column; align-items:stretch; gap:18px; }.site-nav.open { display:flex; }.hero { display:block; padding:72px 0; }.hero h1 { font-size:clamp(58px,17vw,100px); }.hero-art { min-height:420px; margin-top:50px; }.browser-body { min-height:315px; padding:35px 28px; }.browser-body h2 { font-size:30px; }.annotation-note { right:18px; top:160px; }.annotation-pin { left:52%; top:139px; }.art-stamp { left:0; top:20px; }.art-caption { right:0; bottom:0; }.signal-inner { width:850px; justify-content:space-around; margin-left:-100px; }.manifesto,.how,.pricing,.privacy { padding:95px 0; }.manifesto-grid,.privacy { display:block; }.manifesto-copy { margin-top:50px; }.how-heading { display:block; margin:55px 0 42px; }.how-note { text-align:left; margin-top:28px; }.feature { grid-template-columns:1fr; gap:14px; }.feature-arrow { display:none; }.pricing-intro { margin:30px 0 0; }.pricing-grid { grid-template-columns:1fr; margin-top:55px; }.plan { min-height:430px; }.privacy-art { margin-bottom:70px; }.download { padding:72px 0 90px; }.download-top,.download-bottom { display:block; }.download-top p,.download-bottom p { text-align:left; margin-top:25px; }.download h2 { margin:75px 0 52px; font-size:clamp(62px,17vw,100px); }.download-actions { margin-top:30px; flex-wrap:wrap; }.site-footer { min-height:130px; align-items:flex-start; padding:26px 0; flex-direction:column; gap:20px; } }
 @media (max-width:800px) { .privacy-page { padding:48px 0 82px; }.privacy-page .brand { margin-bottom:70px; }.privacy-page-copy,.privacy-page .text-link { margin-left:0; } }
 @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; }.reveal { opacity:1; transform:none; transition:none; }.button { transition:none; } }
+
+/* Title rhythm: readable tracking and breathing room between wrapped lines. */
+.hero h1,
+.manifesto h2,
+.how h2,
+.pricing h2,
+.privacy h2,
+.download h2,
+.privacy-page h1,
+.browser-body h2,
+.feature h3 {
+  letter-spacing: normal;
+  line-height: 1.2;
+}
+
+/* Keep the hero's supporting labels clear of the tilted browser artwork. */
+.hero-art .browser-card { position: relative; z-index: 1; }
+.hero-art .art-stamp,
+.hero-art .art-caption { z-index: 2; }
+.hero-art .art-stamp { left: -42px; }
+.hero-art .art-caption { right: -8px; bottom: -34px; }
+
+@media (max-width:800px) {
+  .hero-art .art-stamp { left: -4px; }
+  .hero-art .art-caption { right: 0; bottom: -28px; }
+}
+
+/* Editorial pass: let typography and rules carry hierarchy instead of product cards. */
+:root {
+  --ink: #10110f;
+  --paper: #ece9e0;
+  --muted: #aaa99f;
+  --line: rgba(236, 233, 224, .2);
+  --accent: #e4b846;
+  --display: "Bodoni 72", "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+  --sans: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
+body { font-size: 17px; line-height: 1.6; }
+.shell { width: min(1320px, calc(100% - 96px)); }
+.site-header { min-height: 104px; border-bottom-color: rgba(236, 233, 224, .28); }
+.brand { font-size: 21px; letter-spacing: -.045em; }
+.site-nav { gap: 34px; font-size: 13px; }
+.nav-cta { border: 0; border-bottom: 1px solid var(--accent); padding: 5px 0; }
+.hero { min-height: calc(100vh - 104px); grid-template-columns: .82fr 1.18fr; gap: 8%; padding: 104px 0 136px; align-items: center; }
+.hero h1 { font-size: clamp(76px, 10.2vw, 152px); line-height: .94; margin: 0 0 38px; letter-spacing: -.055em; }
+.hero h1 em, .manifesto h2 em, .how h2 em, .privacy h2 em, .download h2 em { font-style: italic; font-weight: 400; }
+.hero-dek { max-width: 390px; font-size: 18px; line-height: 1.55; }
+.hero-dek strong { color: var(--paper); font-weight: 500; }
+.hero-actions { margin-top: 46px; }
+.button { padding: 16px 19px; border-radius: 0; }
+.text-link { border-bottom-color: var(--accent); }
+.hero-art { min-height: 620px; }
+.browser-card { width: min(100%, 650px); border-color: rgba(17,17,15,.7); box-shadow: 24px 34px 0 rgba(228,184,70,.16); transform: rotate(1.7deg); }
+.browser-bar { height: 42px; }
+.browser-body { min-height: 460px; padding: 70px 76px; }
+.browser-body h2 { font-size: 52px; line-height: 1; }
+.browser-body p { font-size: 14px; max-width: 320px; }
+.art-stamp { left: -34px; top: 52px; font-family: var(--sans); font-size: 12px; text-transform: none; letter-spacing: .03em; transform: rotate(-7deg); }
+.art-caption { font-family: var(--sans); text-transform: none; letter-spacing: 0; font-size: 12px; color: var(--muted); }
+.signal-band { background: #181916; border-color: rgba(236,233,224,.25); }
+.signal-inner { height: 92px; font-family: var(--sans); text-transform: none; letter-spacing: .01em; font-size: 13px; }
+.signal-inner b { font-family: var(--sans); font-weight: 400; }
+.manifesto, .how { padding: 176px 0; }
+.eyebrow, .section-index, .download-label, .how-note, .pricing-footnote, .privacy-art>span, .article-kicker { font-family: var(--sans); text-transform: none; letter-spacing: .02em; font-size: 12px; }
+.manifesto-grid { gap: 16%; margin-top: 58px; }
+.manifesto h2, .how h2, .privacy h2, .pricing h2 { font-size: clamp(62px, 7.8vw, 112px); line-height: .98; letter-spacing: -.045em; }
+.manifesto-copy { max-width: 470px; }
+.lede { font-size: 28px; line-height: 1.2; color: var(--paper); }
+.how { border-top: 1px solid var(--line); }
+.how-heading { margin: 72px 0 74px; }
+.how-note { text-align: right; color: var(--muted); line-height: 1.45; }
+.feature { grid-template-columns: 1fr 32px; padding: 34px 0 38px; border-top-color: rgba(236,233,224,.3); }
+.feature:last-child { border-bottom-color: rgba(236,233,224,.3); }
+.feature h3 { font-size: 29px; letter-spacing: -.02em; margin-bottom: 12px; }
+.feature p { font-size: 16px; line-height: 1.55; }
+.feature-arrow { color: var(--accent); }
+.pricing, .privacy { border-top-color: var(--line); }
+.pricing { padding: 160px 0 176px; }
+.pricing-heading .section-index { margin-bottom: 58px; }
+.pricing-intro { font-size: 19px; }
+.pricing-grid { gap: 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.plan { min-height: 440px; padding: 30px 32px 34px; border: 0; }
+.plan-free { background: transparent; border-right: 1px solid var(--line); }
+.plan-pro { background: var(--paper); }
+.plan-top { font-family: var(--sans); text-transform: none; letter-spacing: .01em; font-size: 13px; }
+.plan-price { margin-top: 70px; }
+.plan-features { border-top-color: var(--line); }
+.plan-link { border-bottom-color: var(--accent); }
+.privacy { padding: 176px 0; }
+.privacy-art { border: 0; background: #191a17; }
+.privacy-mark { background: var(--accent); }
+.download { padding: 110px 0 150px; }
+.download-top p, .download-bottom p { font-family: var(--sans); text-transform: none; letter-spacing: .01em; font-size: 13px; }
+.download h2 { font-size: clamp(82px, 10vw, 150px); line-height: .94; letter-spacing: -.05em; }
+.site-footer { min-height: 108px; font-family: var(--sans); text-transform: none; letter-spacing: .01em; font-size: 12px; }
+.site-footer .brand { font-family: var(--sans); }
+.reveal { transform: translateY(28px); transition-duration: 1s; }
+
+@media (max-width: 800px) {
+  .shell { width: min(100% - 38px, 620px); }
+  .site-header { min-height: 76px; }
+  .hero { min-height: auto; padding: 78px 0 94px; }
+  .hero h1 { font-size: clamp(64px, 18vw, 106px); margin-bottom: 30px; }
+  .hero-dek { font-size: 17px; }
+  .hero-art { min-height: 440px; margin-top: 66px; }
+  .browser-body { min-height: 330px; padding: 40px 30px; }
+  .browser-body h2 { font-size: 34px; }
+  .browser-body p { font-size: 12px; }
+  .art-stamp { left: -2px; }
+  .manifesto, .how, .privacy { padding: 108px 0; }
+  .manifesto-grid { margin-top: 44px; }
+  .manifesto h2, .how h2, .privacy h2, .pricing h2 { font-size: clamp(58px, 16vw, 92px); }
+  .lede { font-size: 24px; }
+  .how-note { text-align: left; }
+  .pricing { padding: 108px 0; }
+  .pricing-grid { border-bottom: 0; }
+  .plan { min-height: 400px; padding: 28px 0 34px; }
+  .plan-free { border-right: 0; border-bottom: 1px solid var(--line); }
+  .download { padding: 82px 0 108px; }
+  .download h2 { margin: 70px 0 54px; font-size: clamp(70px, 18vw, 108px); }
+}
+.hero h1 em,
+.manifesto h2 em,
+.how h2 em,
+.pricing h2 em,
+.privacy h2 em,
+.download h2 em,
+.privacy-page h1 em {
+  letter-spacing: normal;
+  line-height: 1.2;
+}

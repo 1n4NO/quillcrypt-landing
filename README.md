@@ -1,16 +1,20 @@
 # Quillcrypt landing page
 
-Standalone static landing page for [quillcrypt.1n4n0.com](https://quillcrypt.1n4n0.com/).
+Standalone Editorial-style product landing page for Quillcrypt.
 
 Open `index.html` directly or serve this folder with any static web server. It has no build step or third-party runtime dependency; the visual language uses an oversized magazine-style typographic system, asymmetrical grids, hairline rules, and the Quillcrypt yellow accent.
 
 ## Release setup
 
-The landing repo is intentionally independent from the extension and relay repositories.
+Run `npm run build:firefox --workspace=extension` and `npm run build:chrome --workspace=extension`,
+then `npm run release:verify` to create versioned archives and their SHA-256 record.
 
 Before publishing, replace the deployment-owned URLs in `release-config.js` with the approved
 Firefox/Chrome store or release URLs. Store URLs open normally; archive URLs retain download
-behavior.
+behavior. Keep the version in the root package, workspace lockfile, extension/relay packages,
+manifests, and landing URLs aligned with `npm run version:sync`; `npm run release:verify` checks
+the complete set and the built archives.
 
-Run `npm test` to check local links, metadata assets, demo CTA removal, and the no-external-font
-guarantee. Update the canonical/social host in both HTML pages if the production host changes.
+`npm run test:landing` checks local links, metadata assets, demo CTA removal, and the no-external-font
+guarantee. The canonical/social host is currently `https://quillcrypt.1n4n0.com/`; update it in both HTML
+pages if the production host changes.
