@@ -4,6 +4,19 @@
   "private": true,
   "description": "Standalone Quillcrypt product landing page.",
   "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
     "test": "node verify.mjs"
+  },
+  "dependencies": {
+    "next": "^16.3.3",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@types/node": "^26.4.0",
+    "@types/react": "19.2.18",
+    "typescript": "7.0.2"
   }
 }

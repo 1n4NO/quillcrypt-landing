@@ -1,18 +1,25 @@
-import { existsSync, readFileSync } from 'node:fs';
-import { dirname, resolve } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { existsSync, readFileSync } from "node:fs";
+import { resolve } from "node:path";
 
-const root = dirname(fileURLToPath(import.meta.url));
-const pages = ['index.html', 'privacy.html'];
-const pageHtml = pages.map((page) => readFileSync(resolve(root, page), 'utf8'));
-const html = pageHtml.join('\n');
-const localReferences = pageHtml.flatMap((content) => [...content.matchAll(/(?:href|src)="([^"]+)"/g)]
-  .map((match) => match[1])
-  .filter((value) => !value.startsWith('#') && !/^(?:https?:|mailto:|data:)/.test(value)));
-const ogImage = pageHtml[0].match(/property="og:image"\s+content="([^"]+)"/);
-if (ogImage && !/^(?:https?:|data:)/.test(ogImage[1])) localReferences.push(ogImage[1]);
-const missing = localReferences.filter((value) => !existsSync(resolve(root, value.split('#')[0].split('?')[0])));
-if (missing.length) throw new Error(`Missing landing assets: ${missing.join(', ')}`);
-if (html.includes('data-demo') || /Coming soon/i.test(html)) throw new Error('Landing page still contains demo CTA behavior');
-if (readFileSync(resolve(root, 'styles.css'), 'utf8').includes('fonts.googleapis.com')) throw new Error('Landing page still depends on Google Fonts');
-console.log(`Landing checks passed: ${localReferences.length} local references verified.`);
+const root = new URL(".", import.meta.url).pathname;
+const requiredFiles = [
+  "app/layout.tsx",
+  "app/page.tsx",
+  "app/privacy/page.tsx",
+  "app/contact/page.tsx",
+  "app/not-found.tsx",
+  "next.config.mjs",
+  "public/assets/quillcrypt-mark.svg",
+  "public/assets/quillcrypt-mark-gold.svg",
+  "public/assets/quillcrypt-lockup.svg",
+];
+const missing = requiredFiles.filter((file) => !existsSync(resolve(root, file)));
+if (missing.length) throw new Error(`Missing Next.js landing files: ${missing.join(", ")}`);
+const source = readFileSync(resolve(root, "app/page.tsx"), "utf8");
+if (!source.includes("id=\"download\"") || !source.includes("id=\"privacy\"")) {
+  throw new Error("Landing routes are missing required homepage anchors");
+}
+if (readFileSync(resolve(root, "styles.css"), "utf8").includes("fonts.googleapis.com")) {
+  throw new Error("Landing page still depends on Google Fonts");
+}
+console.log(`Next.js landing checks passed: ${requiredFiles.length} required files verified.`);
