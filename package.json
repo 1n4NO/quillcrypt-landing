@@ -1,0 +1,9 @@
+{
+  "name": "quillcrypt-landing",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Standalone Quillcrypt product landing page.",
+  "scripts": {
+    "test": "node verify.mjs"
+  }
+}
