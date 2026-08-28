@@ -5,6 +5,7 @@ const root = new URL(".", import.meta.url).pathname;
 const requiredFiles = [
   "app/layout.tsx",
   "app/page.tsx",
+  "app/how/page.tsx",
   "app/privacy/page.tsx",
   "app/contact/page.tsx",
   "app/not-found.tsx",

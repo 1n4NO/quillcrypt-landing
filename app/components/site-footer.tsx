@@ -3,7 +3,7 @@ import Link from "next/link";
 export function SiteFooter() {
   return (
     <footer className="site-footer shell">
-      <Link className="brand" href="#top">
+      <Link className="brand" href="/">
         <img src="/assets/quillcrypt-mark.svg" alt="" />
         <span>quill<span>crypt</span></span>
       </Link>

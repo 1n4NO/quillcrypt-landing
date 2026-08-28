@@ -174,3 +174,57 @@ body { font-size: 17px; line-height: 1.6; }
   letter-spacing: normal;
   line-height: 1.2;
 }
+
+/* How it works: an indexed field guide for the real toolbar and sync flows. */
+.how-page { overflow:hidden; }
+.how-hero { padding:128px 0 164px; border-bottom:1px solid var(--line); }
+.how-hero h1 { max-width:900px; margin:34px 0 34px; font-size:clamp(76px,10vw,148px); letter-spacing:-.055em; line-height:.96; font-weight:500; }
+.how-hero h1 em, .tool-guide h2 em, .how-flow h2 em, .how-boundary h2 em { font-style:italic; font-weight:400; }
+.how-hero-dek { max-width:410px; margin-left:20%; color:var(--muted); font-size:19px; line-height:1.55; }
+.tool-guide { display:grid; grid-template-columns:.78fr 1.22fr; gap:12%; padding:176px 0; }
+.tool-guide-intro { align-self:start; position:sticky; top:44px; }
+.tool-guide h2, .how-flow h2, .how-boundary h2 { margin:56px 0 30px; font-size:clamp(62px,7.8vw,112px); line-height:.98; letter-spacing:-.045em; font-weight:500; }
+.tool-guide-intro>p:last-child { max-width:390px; color:var(--muted); }
+.tool-list { border-top:1px solid var(--line); }
+.tool-row { display:grid; grid-template-columns:40px 48px 1fr auto; gap:18px; align-items:start; padding:28px 0 31px; border-bottom:1px solid var(--line); }
+.tool-row-number, .tool-row-gesture { color:var(--muted); font:12px var(--mono); }
+.tool-row-icon { width:42px; height:42px; display:grid; place-items:center; color:var(--accent); background:#191a17; }
+.tool-icon { width:23px; height:23px; }
+.tool-row h3, .how-flow h3 { margin:0 0 7px; font-size:21px; font-weight:500; }
+.tool-row p, .how-flow p, .how-boundary-copy>p:not(.lede) { margin:0; max-width:430px; color:var(--muted); font-size:15px; line-height:1.55; }
+.tool-row-gesture { padding-top:5px; text-align:right; }
+.how-flow { border-top:1px solid var(--line); padding:166px 0 176px; }
+.how-flow-heading { display:grid; grid-template-columns:1fr 1fr; gap:16%; align-items:end; margin-bottom:76px; }
+.how-flow-heading h2 { margin-top:56px; }
+.how-flow-heading>p { max-width:370px; margin-bottom:8px; color:var(--muted); font-size:19px; }
+.how-flow-list { border-top:1px solid var(--line); }
+.how-flow-list article { display:grid; grid-template-columns:56px 1fr; gap:22px; padding:32px 0 35px; border-bottom:1px solid var(--line); }
+.flow-mark { color:var(--accent); font:13px var(--mono); }
+.how-flow h3 { font-size:25px; margin-bottom:10px; }
+.how-boundary { display:grid; grid-template-columns:1fr 1fr; gap:16%; align-items:end; border-top:1px solid var(--line); padding:166px 0 176px; }
+.how-boundary h2 { margin-bottom:0; }
+.how-boundary-copy { max-width:440px; }
+.how-boundary-copy .lede { margin:0 0 24px; }
+.how-boundary-copy .text-link { display:inline-block; margin-top:30px; }
+.how-end { display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--line); padding:62px 0 88px; color:var(--muted); }
+.how-end p { margin:0; font:13px var(--sans); }
+.how-end .button { color:var(--ink); }
+
+@media (max-width:800px) {
+  .how-hero { padding:78px 0 102px; }
+  .how-hero h1 { font-size:clamp(64px,17vw,104px); }
+  .how-hero-dek { margin-left:0; font-size:17px; }
+  .tool-guide, .how-boundary { display:block; padding:108px 0; }
+  .tool-guide-intro { position:static; }
+  .tool-guide h2, .how-flow h2, .how-boundary h2 { font-size:clamp(58px,16vw,92px); }
+  .tool-list { margin-top:64px; }
+  .tool-row { grid-template-columns:30px 42px 1fr; gap:13px; }
+  .tool-row-gesture { grid-column:3; padding:0; text-align:left; }
+  .how-flow { padding:108px 0; }
+  .how-flow-heading { display:block; margin-bottom:60px; }
+  .how-flow-heading>p { margin-top:42px; font-size:17px; }
+  .how-flow-list article { grid-template-columns:34px 1fr; gap:14px; }
+  .how-boundary-copy { margin-top:54px; }
+  .how-end { display:block; padding:48px 0 70px; }
+  .how-end .button { margin-top:25px; }
+}

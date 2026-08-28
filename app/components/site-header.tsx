@@ -14,7 +14,7 @@ export function SiteHeader() {
 
   return (
     <header className="site-header shell">
-      <Link className="brand" href="#top" aria-label="Quillcrypt home">
+      <Link className="brand" href="/" aria-label="Quillcrypt home">
         <img src="/assets/quillcrypt-mark.svg" alt="" />
         <span>quill<span>crypt</span></span>
       </Link>
@@ -23,7 +23,7 @@ export function SiteHeader() {
       </button>
       <nav id="site-nav" className={`site-nav${open ? " open" : ""}`} aria-label="Primary navigation">
         <Link href="#why">Why Quillcrypt</Link>
-        <Link href="#how">How it works</Link>
+        <Link href="/how">How it works</Link>
         <Link href="#pricing">Pricing</Link>
         <Link href="/privacy">Privacy</Link>
         <Link className="nav-cta" href="#download">Get the extension <span>↗</span></Link>

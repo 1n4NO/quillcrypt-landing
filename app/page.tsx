@@ -18,7 +18,7 @@ export default function HomePage() {
           <div className="hero-copy reveal">
             <h1>Read between<br /><em>the lines.</em></h1>
             <p className="hero-dek"><strong>A private margin for the web.</strong> Annotate alone for free, or bring your team into the same encrypted page.</p>
-            <div className="hero-actions"><Link className="button button-dark" href="#download">Start annotating <span>↗</span></Link><Link className="text-link" href="#how">See how it works <span>↓</span></Link></div>
+            <div className="hero-actions"><Link className="button button-dark" href="#download">Start annotating <span>↗</span></Link><Link className="text-link" href="/how">See how it works <span>↗</span></Link></div>
           </div>
           <div className="hero-art reveal" aria-label="Illustration of a webpage annotated by a team">
             <div className="art-stamp"><span>your layer<br />over the web</span></div>
