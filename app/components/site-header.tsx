@@ -22,11 +22,12 @@ export function SiteHeader() {
         Menu <span>{open ? "×" : "+"}</span>
       </button>
       <nav id="site-nav" className={`site-nav${open ? " open" : ""}`} aria-label="Primary navigation">
-        <Link href="#why">Why Quillcrypt</Link>
+        <Link href="/product">Product</Link>
+        <Link href="/use-cases">Use cases</Link>
         <Link href="/how">How it works</Link>
-        <Link href="#pricing">Pricing</Link>
-        <Link href="/privacy">Privacy</Link>
-        <Link className="nav-cta" href="#download">Get the extension <span>↗</span></Link>
+        <Link href="/security">Security</Link>
+        <Link href="/pricing">Pricing</Link>
+        <Link className="nav-cta" href="/#download">Get the extension <span>↗</span></Link>
       </nav>
     </header>
   );
