@@ -1,10 +1,20 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+
+const navigation = [
+  { href: "/product", label: "Product" },
+  { href: "/use-cases", label: "Use cases" },
+  { href: "/how", label: "How it works" },
+  { href: "/security", label: "Security" },
+  { href: "/pricing", label: "Pricing" },
+];
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const close = () => setOpen(false);
@@ -22,11 +32,20 @@ export function SiteHeader() {
         Menu <span>{open ? "×" : "+"}</span>
       </button>
       <nav id="site-nav" className={`site-nav${open ? " open" : ""}`} aria-label="Primary navigation">
-        <Link href="/product">Product</Link>
-        <Link href="/use-cases">Use cases</Link>
-        <Link href="/how">How it works</Link>
-        <Link href="/security">Security</Link>
-        <Link href="/pricing">Pricing</Link>
+        {navigation.map((item) => {
+          const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
+
+          return (
+            <Link
+              className={active ? "active" : undefined}
+              href={item.href}
+              aria-current={active ? "page" : undefined}
+              key={item.href}
+            >
+              {item.label}
+            </Link>
+          );
+        })}
         <Link className="nav-cta" href="/#download">Get the extension <span>↗</span></Link>
       </nav>
     </header>
