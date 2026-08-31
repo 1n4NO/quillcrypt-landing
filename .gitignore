@@ -3,3 +3,5 @@
 node_modules
 *.tsbuildinfo
 /REDESIGN_BRIEF.md
+.env*
+!.env.example

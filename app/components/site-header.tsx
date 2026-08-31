@@ -10,6 +10,7 @@ const navigation = [
   { href: "/how", label: "How it works" },
   { href: "/security", label: "Security" },
   { href: "/pricing", label: "Pricing" },
+  { href: "/dashboard", label: "Account" },
 ];
 
 export function SiteHeader() {
